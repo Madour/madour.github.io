@@ -1,0 +1,83 @@
+/* Basic */
+@media screen and (max-width: 736px) {
+	body {
+		min-width: 320px;
+	}
+
+	body, input, select, textarea {
+		font-size: 12pt;
+	}
+
+
+/* Main */
+	#main.menu-active{
+		transform: translateX(-50px);
+	}
+
+/* Header */
+
+	.page h1 {
+		font-size: 2.5em;
+	}
+
+	.page p {
+		font-size: 1em;
+	}
+
+	#header nav {
+		font-size: 1em;
+	}
+
+		#header nav a:hover {
+			font-size: 1em;
+		}
+
+		#header nav a:active {
+			font-size: 1em;
+		}
+
+	#projects-wrapper {
+		width: calc(100% + 60px);
+		left: -30px;
+	}
+
+	.project {
+		grid-template-columns: 250px auto;
+	}
+
+	.project .thumbnail {
+		text-align: center;
+	}
+	.project .thumbnail img {
+		max-width: 250px;
+		max-height: 200px;
+	}
+	.contact_info{
+		width: 90vw;
+		left: 5vw
+	}
+
+	#footer{
+		height: 3em;
+		line-height: 3em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.project {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-height: 699px) {
+	#projects-wrapper {
+		height: 400px;
+	}
+}
+
+@media screen and (max-height: 570px) {
+	#projects-wrapper {
+		height: 300px;
+	}
+}

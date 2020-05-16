@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+		<title>Modar Nasser web page</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="NASSER, Modar, development" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/init.js"></script>
+		
+		<noscript>
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style-mobile.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css"/>
+		
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+		<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<meta name="theme-color" content="#2f2f2f">
+	</head>
+
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<!-- Hamburger -->
+				<div id="burger" class="hamburger-btn">
+					<span></span>
+				</div>
+				<!-- Menu -->
+				<div id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="#" onclick="go_to('home')">Home</a></li>
+						<li><a href="#" onclick="go_to('about')">About me</a></li>
+						<li><a href="#" onclick="go_to('projects')">My Projects</a></li>
+						<li><a href="#" onclick="go_to('contact')">Contact</a></li>
+					</ul>
+				</div>
+				<!-- Header -->
+				<div id="home" class="page active_page">
+					<section>
+						<h1>Modar Nasser</h1>
+						<nav>
+							<ul class="social">
+								<li>
+									<a id="mail_social" onclick="toggle_contact('mail')"  class="icon fa-envelope-o">
+										<span class="label">Email</span>
+									</a>
+								</li>
+								<li>
+									<a id="github_social"  href="https://github.com/Madour" target="_blank" class="icon fa-github">
+									<span class="label">Github</span>
+									</a>
+								</li>
+								<li>
+									<a id="linkedin_social"  href="https://www.linkedin.com/in/modar-nasser" target="_blank" class="icon fa-linkedin">
+									<span class="label">LinkedIn</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<h2 class="next" onclick="go_to('about')">&#9660;</h2>
+
+					</section>
+				</div>
+
+				<div id="about" class="page hide">
+					<section>
+						<h2 class="previous" onclick="go_to('home')">&#9650;</h2>
+						<h1>About me</h1>
+						<p>I am a student in Computer Science and Embedded systems at Paris</p>
+						<p>Mostly self-taught, i thrive on new knowledge</p>
+						<p>I like to create things and start challenging new projects to hone my skills</p>
+						<p>I am particularly interested in <b>Robotics</b> and <b>Game Development</b></p>
+						<h2 class="next" onclick="go_to('projects')">&#9660;</h2>
+					</section>
+				</div>
+
+				<div id="projects" class="page hide">
+					<section>
+						<h2 class="previous" onclick="go_to('about')">&#9650;</h2>
+						<h1>My projects</h1>
+						<div id="projects-wrapper">
+							<div id="projects-container">
+								<article class="project">
+									<div class="thumbnail"><img src="img/parkconquest.png"></div>
+									<div class="description">
+										<h2> Park Conquest </h2>
+										<p> Park Conquest is a tactical RPG video game I am creating from scratch.</p>
+										<p> I started this project back when I was in highschool as one of my biggest long term project.</p>
+									</div>
+								</article>
+
+								<article class="project">
+									<div class="thumbnail"></div>
+									<div class="description">
+										<h2>NasNas</h2>
+										<p>NasNas is a C++ game framework i am currently developing. It is built on top of SFML. </p>
+										<p>The framework makes game development less tedious by	taking care of all the repetitive tasks.</p>
+										<p>It provides a bunch of features like resource loading and management, a scene and layers system,
+										game cameras, and more.</p>
+										<p>You can find it on <a target="_blank" href="https://github.com/Madour/NasNas">GitHub</a>.</p>
+									</div>
+								</article>
+
+								<article class="project">
+									<div class="thumbnail"></div>
+									<div class="description">
+										<h2>pyNasNas</h2>
+										<p>pyNasNas is the python version of NasNas. It is a bit ahead in development.</p>
+										<p>It has the same API as its sibling, and follows Python code style guide. </p>
+										<p>It is be useful for fast game prototyping before switching to C++ when you need performance.</p>
+										<p>You can find it on <a target="_blank" href="https://github.com/Madour/pyNasNas">GitHub</a>.</p>
+									</div>
+								</article>
+							</div>
+						</div>
+						<h2 class="next" onclick="go_to('contact')">&#9660;</h2>
+					</section>
+				</div>
+
+				<div id="contact" class="page hide">
+					<section>
+						<h1>Contact</h1>
+						<p>You can reach me by <span class="fa-envelope icon"></span> at modar1999@gmail.com</p>
+						<p>or send me a message on <a id="linkedin_social"  href="https://www.linkedin.com/in/modar-nasser" target="_blank">Linked<span class="fa-linkedin icon"></span></a></p>
+						<p>(I don't have <i>any</i> other social media)</p>
+						<h2 class="next" onclick="go_to('home')">&#9660;</h2>
+					</section>
+				</div>
+					
+			</div>
+		</div>
+		
+		<div class="black_layer" id="black_layer"></div>
+
+		<div id="mail_info" class="contact_info">
+			<div onclick="toggle_contact('mail')">&times;</div>
+			<p>E-mail : modar1999@gmail.com</p>
+		</div>
+
+		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript">
+			var burger = document.getElementById("burger");
+			var main = document.getElementById("main");
+			toggleHandler(burger);
+			
+			function toggleHandler(toggle) {
+			  toggle.addEventListener( "click", function(e) {
+			    e.preventDefault();
+			    (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+			    (main.classList.contains("menu-active") === true) ? main.classList.remove("menu-active") : main.classList.add("menu-active");
+			  });
+			}
+
+			$("#projects-wrapper").mCustomScrollbar({
+				theme:"minimal",
+				axis:"y",
+			});
+		</script>
+	</body>
+</html>
