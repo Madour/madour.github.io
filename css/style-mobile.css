@@ -41,13 +41,6 @@
 		left: -30px;
 	}
 
-	.project {
-		grid-template-columns: 250px auto;
-	}
-
-	.project .thumbnail {
-		text-align: center;
-	}
 	.project .thumbnail img {
 		max-width: 250px;
 		max-height: 200px;
@@ -65,9 +58,11 @@
 
 @media screen and (max-width: 600px) {
 
-	.project {
-		grid-template-columns: 1fr;
+	#projects-container {
+		grid-template-columns: 100%;
 	}
+	.project:nth-child(2n-1) {border-right: 0px solid black;}
+
 }
 
 @media screen and (max-height: 699px) {
