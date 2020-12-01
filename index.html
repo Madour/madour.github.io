@@ -21,8 +21,8 @@
 		<!-- <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.min.css" rel="stylesheet"> -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/style-mobile.css">
-		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css"/>
-		
+		<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+
 		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
@@ -116,7 +116,6 @@
 								<article class="project">
 									<div class="thumbnail"><img src="img/parkconquest.png"></div>
 									<div class="description">
-										<!-- <h2> Park Conquest </h2> -->
 										<p> Park Conquest is a tactical RPG video game I am creating from scratch.</p>
 										<p> I started this project back when I was in highschool as one of my biggest long term project.</p>
 									</div>
@@ -166,7 +165,6 @@
 										<p>You can find some of my games on <a class="flash_hover" target="_blank" href="https://madour.itch.io/">Itch.io</a>.</p>
 									</div>
 								</article>
-
 							</div>
 						</div>
 						<h2 class="next" onclick="go_to('contact')">&#9660;</h2>
@@ -193,7 +191,7 @@
 			<p>E-mail : modar1999@gmail.com</p>
 		</div>
 
-		<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="js/perfect-scrollbar.min.js"></script>
 		<script type="text/javascript">
 			var burger = document.getElementById("burger");
 			var main = document.getElementById("main");
@@ -207,10 +205,7 @@
 			  });
 			}
 
-			$("#projects-wrapper").mCustomScrollbar({
-				theme:"minimal",
-				axis:"y",
-			});
+			const ps = new PerfectScrollbar('#projects-wrapper');
 		</script>
 	</body>
 </html>

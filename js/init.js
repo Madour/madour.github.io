@@ -13,9 +13,8 @@
 	
 	// Fix scroll position on orientation change.
 		.on('orientationchange', function() {
-		jQuery('body').scrollTop(0);
+			jQuery('body').scrollTop(0);
 		});
-
 
 })();
 
