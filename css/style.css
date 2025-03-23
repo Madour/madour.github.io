@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
 
 /* Basic */
-.hide{
-	opacity: 0 !important;
-}
 
 *, *:after, *:before {
 	box-sizing: border-box; padding: 0;
@@ -12,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 300;}
 
 ul {list-style: none;}
 
-body, input, select, textarea {
+body, input, select, textarea, span {
 	user-select: none;
 	color: white;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -299,13 +296,13 @@ ul.social a {
 
 /* Header */
 @keyframes home_open {
-	0%   { transform: translate3d(0, 110vh, 0); opacity: 0; }
-	100% { transform: translate3d(0, 100vh, 0); opacity: 1; }
+	0%   { transform: translate3d(0, 110vh, 0); opacity: 0; display: none}
+	100% { transform: translate3d(0, 100vh, 0); opacity: 1; display: block}
 }
 
 @keyframes home_close {
-	0%   { transform: translate3d(0, 100vh, 0); opacity: 1; }
-	100% { transform: translate3d(0, 80vh, 0); opacity: 0; }
+	0%   { transform: translate3d(0, 100vh, 0); opacity: 1; display: block}
+	100% { transform: translate3d(0, 80vh, 0); opacity: 0; display: none}
 }
 	
 @keyframes vertical_delayed_appearance {
@@ -333,12 +330,14 @@ ul.social a {
 	vertical-align: middle;
 	width: 100%;
 	height: 100%;
-	transition: opacity 1s ease, transform 1s ease;
+	transition: opacity 0.5s ease, transform 2s ease;
+	opacity: 0;
 }
 
 .page.active_page {
 	transform: translate3d(0, 100vh, 0);
 	transition-delay: 500ms;
+	opacity: 1;
 }
 
 	.page section {
@@ -382,8 +381,7 @@ ul.social a {
 		letter-spacing: -0.035em;
 		line-height: 1em;
 		margin-bottom: 10px;
-
-		}
+	}
 
 	.page h2 {
 		font-size:2em;
@@ -402,7 +400,7 @@ ul.social a {
 	animation: home_close 1s 0s forwards;
 }
 
-#home:not(.hide) {
+#home.active_page {
 	animation: home_open 1s 2.25s forwards;
 	opacity: 0;
 }
@@ -503,6 +501,11 @@ ul.social a {
 	}
 	#about.active_page p:nth-of-type(4) {
 		animation-delay: 3.25s;
+	}
+	#about.active_page p:nth-of-type(5) {
+		animation-delay: 3.5s;
+	}
+	#about.active_page p:last-of-type {
 		margin-bottom: 35px;
 	}
 
@@ -596,7 +599,7 @@ ul.social a {
 	top: -155px;
 	border: 1px solid rgba(0,0,0,0.5);
 	border-radius:5px;
-	background-color: rgba(255, 255, 255, 0.87);
+	background-color: rgba(255, 255, 255, 0.95);
 	text-align: center;
 	color: #393939;
 	transition: top 500ms 200ms ease
